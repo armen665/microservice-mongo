@@ -3,3 +3,4 @@
 /api/node_modules
 /socket/node_modules
 /users-messages-schemas
+/.idea

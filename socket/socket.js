@@ -1,7 +1,7 @@
 const io = require('socket.io').listen(3002);
 const createSchemas = require('users-messages-schemas12');
 
-const {Message} = createSchemas('mongodb+srv://armen:6658@cluster0.t3naj.mongodb.net/chat?retryWrites=true&w=majority');
+const {Message} = createSchemas(process.env.MONGO_DB_URL);
 
 
 io.on('connect', socket => {

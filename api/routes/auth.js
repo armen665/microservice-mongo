@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const createSchemas = require('users-messages-schemas12');
 
 const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
-const {User} = createSchemas('mongodb+srv://armen:6658@cluster0.t3naj.mongodb.net/chat?retryWrites=true&w=majority');
+const {User} = createSchemas(process.env.MONGO_DB_URL);
 
 const authRouter = express.Router();
 
